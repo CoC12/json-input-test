@@ -1,0 +1,51 @@
+<script src="./index.js"></script>
+
+<div class="json-input"></div>
+<div class="json-input__output">
+    <button class="json-input__output-button">出力</button>
+</div>
+<textarea class="json-input__output-field" cols="100" rows="50"></textarea>
+
+<template class="json-input__template-container">
+    <div class="json-input__container">
+        <div class="json-input__field-container">
+        </div>
+        <button class="json-input__add-field-button">+ フィールドを追加</button>
+        <button class="json-input__add-child-button">+ 子要素を追加</button>
+    </div>
+</template>
+
+<template class="json-input__template-field">
+    <div class="json-input__field">
+        <input class="key" type="text" placeholder="key">
+        <input class="value" type="text" placeholder="value">
+        <button class="json-input__remove-field-button">-</button>
+    </div>
+</template>
+
+<template class="json-input__template-child">
+    <div class="json-input__child">
+        <input class="key" type="text" placeholder="key">
+        <button class="json-input__remove-child-button">-</button>
+        <div class="json-input__child-container">
+        </div>
+    </div>
+</template>
+
+<style>
+    .json-input {
+        margin: 10px;
+    }
+    .json-input__output {
+        margin: 10px;
+    }
+    .json-input__output-field {
+        margin: 10px;
+    }
+    .json-input__child-container {
+        margin-left: 100px;
+    }
+    .json-input__add-field-button {
+        margin: 5px 0;
+    }
+</style>
