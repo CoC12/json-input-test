@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const jsonInput = document.querySelector('.json-input');
     initContainer(jsonInput);
 
+    // 初回のみチェック状態にする
+    const skuUnitRadio = document.querySelector('.json-input__sku-unit-radio');
+    skuUnitRadio.checked = true;
+
     // 出力ボタン
     const outputButton = document.querySelector('.json-input__output-button');
     const outputField = document.querySelector('.json-input__output-field');

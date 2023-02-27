@@ -24,6 +24,7 @@
         <input class="key" type="text" placeholder="key">
         <input class="value" type="text" placeholder="value">
         <button class="json-input__remove-field-button">-</button>
+        <span class="json-input__field-attention">※ このフィールドは無視されます。</button>
     </div>
 </template>
 
@@ -61,5 +62,11 @@
     }
     .json-input__add-field-button {
         margin: 5px 0;
+    }
+    .json-input__field-attention {
+        color: red;
+    }
+    .json-input__sku-unit-radio:checked ~ .json-input__container-hierarchy .json-input__field-attention {
+        display: none;
     }
 </style>
