@@ -8,10 +8,14 @@
 
 <template class="json-input__template-container">
     <div class="json-input__container">
-        <div class="json-input__field-container">
+        <input class="json-input__sku-unit-radio" type="radio" name="sku-unit" >
+        <label class="json-input__sku-unit-label">この階層をSKU単位とする。</label>
+        <div class="json-input__container-hierarchy">
+            <div class="json-input__field-container">
+            </div>
+            <button class="json-input__add-field-button">+ フィールドを追加</button>
+            <button class="json-input__add-child-button">+ 子要素を追加</button>
         </div>
-        <button class="json-input__add-field-button">+ フィールドを追加</button>
-        <button class="json-input__add-child-button">+ 子要素を追加</button>
     </div>
 </template>
 
@@ -41,6 +45,16 @@
     }
     .json-input__output-field {
         margin: 10px;
+    }
+    .json-input__sku-unit-radio {
+        margin-top: 20px;
+    }
+    .json-input__sku-unit-radio:checked ~ .json-input__container-hierarchy {
+        background-color: antiquewhite;
+    }
+    .json-input__container-hierarchy {
+        padding: 10px;
+        border-radius: 10px;
     }
     .json-input__child-container {
         margin-left: 100px;

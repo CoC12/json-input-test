@@ -1,3 +1,5 @@
+let layerCount = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
     const jsonInput = document.querySelector('.json-input');
     initContainer(jsonInput);
@@ -16,6 +18,15 @@ const initContainer = (container) => {
     const template = document.querySelector('.json-input__template-container');
     const templateContainer = template.content.cloneNode(true).querySelector('.json-input__container');
     container.appendChild(templateContainer);
+
+    const skuUnitRadioId = `sku-unit-${layerCount}`;
+    layerCount ++;
+    // ラジオボタン
+    const skuUnitRadio = templateContainer.querySelector('.json-input__sku-unit-radio');
+    skuUnitRadio.id = skuUnitRadioId;
+    // ラジオボタンラベル
+    const skuUnitLabel = templateContainer.querySelector('.json-input__sku-unit-label');
+    skuUnitLabel.setAttribute('for', skuUnitRadioId);
 
     const fieldContainer = templateContainer.querySelector('.json-input__field-container');
     // フィールド追加ボタン
